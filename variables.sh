@@ -62,6 +62,15 @@ export SCALAPACK=2.0.2
 export SCALAPACK_INSTALLER=1.0.2
 export PETSC_STABLE_VER=3.4.5
 
+<<<<<<< HEAD
+=======
+export METIS_TEST_VER=5.1.0
+export METIS_TEST_SUB=aster1
+export SCOTCH_TEST_VER=6.0.4
+export SCOTCH_TEST_SUB=aster5
+export MUMPS_TEST_VER=5.0.2
+
+>>>>>>> 41324be... finished metis testing
 ###################
 # Packages        #
 ###################

@@ -1,16 +1,17 @@
 %define debug_package %{nil}
 
-Name:           codeaster-metis
+Name:           codeaster-testing-metis
 Version:        %{version}
 Release:        1%{?dist}
 Summary:        Serial Graph Partitioning and Fill-reducing Matrix Ordering; specifically for Code_Aster
 
 License:        ASL 2.0 and BSD and LGPLv2+
 URL:            http://code-aster.org/
-Source0:        codeaster-metis-%{version}.tar.gz
+Source0:        codeaster-testing-metis-%{version}.tar.gz
 
 BuildRequires: cmake
 BuildRequires: pcre-devel
+BuildRequires: openblas-static
 
 %description
 %description
@@ -34,11 +35,11 @@ export CFLAGS='-std=gnu9x -fno-stack-protector -O2 -fPIC'
 export CC=gcc
 export CXX=g++
 export F9X=gfortran
-export LDFLAGS='-l%{openblas_lib}/libopenblas.a'
-make
+export LDFLAGS='-L%{openblas_lib} -lopenblas'
+make config prefix=%{buildroot}%{_prefix}
 
 %install
-make install prefix=%{buildroot}%{_prefix} 
+make install
 
 %post
 
@@ -53,6 +54,8 @@ make install prefix=%{buildroot}%{_prefix}
 #rm -rf $RPM_BUILD_ROOT
 
 %changelog
+* Sat Mar 3 2017 Stefan Reiterer 5.1.0-aster1
+- Adaption for fedora (personal)
 * Wed Feb 8 2017 Stefan Reiterer 4.0.3-1
 - Adaption for centos (personal)
 * Thu May 12 2016 Stefan Reiterer 4.0.3
