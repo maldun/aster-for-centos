@@ -23,7 +23,13 @@ export SYSTEM_LIBS=/usr/lib64
 export SYSTEM_INCLUDE=/usr/include
 export MPI_DIR=/cad/app/openmpi/1.10.5
 export EXTLIBS=${ASTER_BASE}/public/
+<<<<<<< HEAD
 export OPENBLAS_DIR=${EXTLIBS}/OpenBLAS
+=======
+export OPENBLAS_DIR=/usr/lib64
+export OPENBLAS_LIB=${OPENBLAS_DIR}
+export OPENBLAS_INC=${SYSTEM_INCLUDE}
+>>>>>>> 1401d78... corrected aster installation process
 
 ###################
 # Install dirs    #
