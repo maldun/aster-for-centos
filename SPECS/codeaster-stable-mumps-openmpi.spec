@@ -28,8 +28,7 @@ LIBPATH="%{openblas_lib} %{scalapackdir}/lib %{mpidir}/lib %{aster_libs}/scotch-
 cp %SOURCE1 wscript
 ./waf build
 mv Makefile.inc Makefile.inc.old
-sed 's|LIBPAR =|SCALAP = %{scalapackdir}/lib/libscalapack.a %{openblas_lib}/libopenblas.a\nLIBPAR = $(SCALAP)  -L%{mpidir}/lib/ -lmpi #-lmpi_f77|' < Makefile.inc.old > Makefile.inc
-
+sed 's|LIBPAR =|SCALAP = %{scalapackdir}/lib/libscalapack.a %{openblas_lib}/libopenblas.a %{aster_libs}/metis-%{metis_version}/lib/libmetis.a\nLIBPAR = $(SCALAP)  -L%{mpidir}/lib/ -lmpi #-lmpi_f77|' < Makefile.inc.old > Makefile.inc
 %build
 make all
 
