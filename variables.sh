@@ -19,9 +19,9 @@ export ASTER_LIBS=${ASTER_BASE}/public
 # External libs   #
 ###################
 
-export MPI_DIR=/cad/app/openmpi/1.10.5
 export SYSTEM_LIBS=/usr/lib64
 export SYSTEM_INCLUDE=/usr/include
+export MPI_DIR=/cad/app/openmpi/1.10.5
 export EXTLIBS=${ASTER_BASE}/public/
 export OPENBLAS_DIR=${EXTLIBS}/OpenBLAS
 
