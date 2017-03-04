@@ -12,7 +12,7 @@ URL:            http://www.code-aster.org/outils/homard/menu_homard.en.htm
 Source0:        codeaster-homard-%{version}.tar.gz
 
 
-BuildRequires: codeaster-frontend
+Requires: codeaster-frontend
 BuildRequires: python, python-setuptools
 
 %description
@@ -37,7 +37,7 @@ mkdir -p %{buildroot}%{aster_root}/outils
 cd %{buildroot}%{_prefix}
 rm -f homard
 ln -sf ASTER_HOMARD/homard homard
-ln -sf ASTER_HOMARD/homard ../../outils/homard
+ln -sf %{_prefix}/homard ../../outils/homard
 
 %post
 
