@@ -8,7 +8,7 @@
 # aster           #
 ###################
 
-export ASTER_BASE=/cad/app/aster
+export ASTER_BASE=/opt/aster
 export ASTER_VER=12.7
 export ASTER_SUB=${ASTER_VER}.0
 export ASTER_FULL=aster-full-src-${ASTER_SUB}-1.noarch.tar.gz
@@ -16,24 +16,31 @@ export ASTER_ROOT=${ASTER_BASE}/${ASTER_VER}
 export ASTER_LIBS=${ASTER_BASE}/public
 
 ###################
+# aster-testing   #
+###################
+
+export ASTER_TESTING_VER=13.3
+export ASTER_TESTING_SUB_VER=0
+export ASTER_TESTING_SUB=${ASTER_TESTING_VER}.${ASTER_TESTING_SUB_VER}
+export ASTER_TESTING_FULL=aster-full-src-${ASTER_TESTING_SUB}-1.noarch.tar.gz
+
+###################
 # External libs   #
 ###################
 
 export SYSTEM_LIBS=/usr/lib64
 export SYSTEM_INCLUDE=/usr/include
-export MPI_DIR=/cad/app/openmpi/1.10.5
+export MPI_DIR=${SYSTEM_LIBS}/openmpi/
 export EXTLIBS=${ASTER_BASE}/public/
-
 export OPENBLAS_DIR=/usr/lib64
 export OPENBLAS_LIB=${OPENBLAS_DIR}
 export OPENBLAS_INC=${SYSTEM_INCLUDE}
-
 
 ###################
 # Install dirs    #
 ###################
 
-export DOWNL=/tmp/
+export DOWNL=${HOME}/Downloads
 export BUILD_DIR=${HOME}/rpmbuild
 export SOURCE_DIR=${BUILD_DIR}/SOURCES
 export SPEC_DIR=${BUILD_DIR}/SPECS
@@ -61,12 +68,14 @@ export HOMARD_SUB=1
 export SCALAPACK=2.0.2
 export SCALAPACK_INSTALLER=1.0.2
 export PETSC_STABLE_VER=3.4.5
+export PETSC_TEST_VER=3.7.3
 
 export METIS_TEST_VER=5.1.0
 export METIS_TEST_SUB=aster1
 export SCOTCH_TEST_VER=6.0.4
 export SCOTCH_TEST_SUB=aster5
 export MUMPS_TEST_VER=5.0.2
+export MUMPS_TEST_SUB=aster
 
 ###################
 # Packages        #
@@ -79,8 +88,10 @@ export METIS_TEST=metis-${METIS_TEST_VER}
 export SCOTCH=scotch-${SCOTCH_VER}
 export SCOTCH_TEST=scotch-${SCOTCH_TEST_VER}
 export MUMPS_STABLE=mumps-${MUMPS_STABLE_VER}
+export MUMPS_TEST=mumps-${MUMPS_TEST_VER}
 export MFRONT=mfront-${MFRONT_VER}
 export PETSC_STABLE=petsc-${PETSC_STABLE_VER}
+export PETSC_TEST=petsc-${PETSC_TEST_VER}
 export SCALAPACK_MPI=scalapack-openmpi-${SCALAPACK}
 
 ###################
