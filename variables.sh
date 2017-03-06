@@ -33,8 +33,8 @@ export SYSTEM_INCLUDE=/usr/include
 export MPI_DIR=/cad/app/openmpi/1.10.5
 export EXTLIBS=${ASTER_BASE}/public/
 export OPENBLAS_DIR=/cad/app/aster/public/OpenBLAS
-export OPENBLAS_LIB=${OPENBLAS_DIR}
-export OPENBLAS_INC=${SYSTEM_INCLUDE}
+export OPENBLAS_LIB=${OPENBLAS_DIR}/lib
+export OPENBLAS_INC=${OPENBLAS_DIR}/include
 
 ###################
 # Install dirs    #
