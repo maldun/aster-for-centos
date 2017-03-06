@@ -8,7 +8,7 @@
 # aster           #
 ###################
 
-export ASTER_BASE=/opt/aster
+export ASTER_BASE=/cad/app/aster
 export ASTER_VER=12.7
 export ASTER_SUB=${ASTER_VER}.0
 export ASTER_FULL=aster-full-src-${ASTER_SUB}-1.noarch.tar.gz
@@ -30,9 +30,9 @@ export ASTER_TESTING_FULL=aster-full-src-${ASTER_TESTING_SUB}-1.noarch.tar.gz
 
 export SYSTEM_LIBS=/usr/lib64
 export SYSTEM_INCLUDE=/usr/include
-export MPI_DIR=${SYSTEM_LIBS}/openmpi/
+export MPI_DIR=/cad/app/openmpi/1.10.5
 export EXTLIBS=${ASTER_BASE}/public/
-export OPENBLAS_DIR=/usr/lib64
+export OPENBLAS_DIR=/cad/app/aster/public/OpenBLAS
 export OPENBLAS_LIB=${OPENBLAS_DIR}
 export OPENBLAS_INC=${SYSTEM_INCLUDE}
 
@@ -40,7 +40,7 @@ export OPENBLAS_INC=${SYSTEM_INCLUDE}
 # Install dirs    #
 ###################
 
-export DOWNL=${HOME}/Downloads
+export DOWNL=/tmp
 export BUILD_DIR=${HOME}/rpmbuild
 export SOURCE_DIR=${BUILD_DIR}/SOURCES
 export SPEC_DIR=${BUILD_DIR}/SPECS
